@@ -1,0 +1,44 @@
+export default function CheerUpWebsite() {
+  const jokes = [
+    "Official report: your girlfriend misses you 24/7 😤",
+    "Stress called… I told it to leave you alone 😌",
+    "You deserve one hug, one nap, and unlimited food 🍕",
+    "Warning: Overthinking detected. Immediate cuddles required 🚨",
+    "You are cute even when you act serious 😭"
+  ];
+
+  const randomJoke = () => {
+    const text = jokes[Math.floor(Math.random() * jokes.length)];
+    alert(text);
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-pink-100 via-white to-purple-100 flex items-center justify-center p-6">
+      <div className="bg-white shadow-2xl rounded-3xl p-8 max-w-md text-center border border-pink-200">
+        <h1 className="text-4xl font-bold text-pink-500 mb-4">
+          Hey Baby 💖
+        </h1>
+
+        <p className="text-gray-700 text-lg leading-relaxed mb-6">
+          I know things are hard right now, but you don’t have to carry everything alone 🫶<br />
+          Your girlfriend is always here to annoy you, support you, and make you smile 😌
+        </p>
+
+        <div className="text-6xl mb-6 animate-bounce">
+          🐻
+        </div>
+
+        <button
+          onClick={randomJoke}
+          className="bg-pink-500 hover:bg-pink-600 transition-all text-white px-6 py-3 rounded-2xl text-lg font-semibold shadow-lg"
+        >
+          Click for Emergency Smile 😭
+        </button>
+
+        <p className="mt-8 text-sm text-gray-500 italic">
+          Made with love by your favorite person 💌
+        </p>
+      </div>
+    </div>
+  );
+}
